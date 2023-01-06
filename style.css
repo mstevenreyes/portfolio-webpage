@@ -73,7 +73,7 @@ header nav a:hover{
 }
 
 .body-wrap__welcome-content{
-    font-size: 50px;
+    font-size: 20px;
     padding: .5rem;
 }
 
@@ -83,4 +83,13 @@ header nav a:hover{
 
 main{
     padding-top: 10rem;
+}
+
+@media only screen and (max-width: 600px) {
+    header nav {
+        display: none;
+    }
+    #logo-text{
+        display: none;
+    }
 }
