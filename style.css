@@ -10,45 +10,62 @@ body {
     /* background-size: cover; */
 }
 
-header, header nav, header nav a{
+header, header ul, header ul a{
     display: flex;
     color: white;
     text-decoration: none;
 }
 
-header nav a{
-    margin: 0px 10px;
-    padding: 2px 10px 1px 10px;
+header ul a{
+    margin: 0rem .4rem;
+    padding: .1rem .4rem .1rem .4rem;
     border: 1px solid rgba(7, 0, 0, 0);
     transition-duration: .2s;
 }
 
-header nav{
+header ul{
     height: max-content;
-    margin-top: 10px;
+    margin-top: .5rem;
     margin-left: auto;
-    margin-right: 5%;
 }
 
-header nav a:hover{
-    border: 1px solid white;
+header ul a:hover{
+    border: .05rem solid white;
     color: rgba(255, 255, 255, 0.83);
 }
 
+header ul li{
+    list-style: none;
+}
+.menu-wrapper{
+    display: flex;
+    margin-left: auto;
+
+    margin-right: 5%;
+}
 .center{
     text-align: center;
     margin: 0px auto;
 }
-
+#burger-menu{
+    display: none;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgb(219, 219, 219);
+    margin-top: 2rem;
+    border: none;
+    cursor: pointer;
+    height: max-content;
+}
 #logo-brand{
     display: flex;
     margin-left: 2rem;
+    height: max-content;
 }
 #logo-brand img{
     width: 50px;
 }
 #logo-brand h3{
-    margin: auto 0px auto 20px;
+    margin: auto 0px auto 1.2rem;
 }
 
 .projects-navigation{
@@ -60,9 +77,9 @@ header nav a:hover{
 }
 .projects-navigation button{
     background-color: rgba(7, 0, 0, 0);
-    border: 1px solid rgba(255, 255, 255, 0);
+    border: .05rem solid rgba(255, 255, 255, 0);
     padding: 10px 13px;
-    border-radius: 300px;
+    border-radius: 10rem;
     margin: auto 0rem;
     transition-duration: .2s;
     color: rgba(255, 255, 255, 0.763);
@@ -73,7 +90,7 @@ header nav a:hover{
 }
 
 .body-wrap__welcome-content{
-    font-size: 20px;
+    font-size: 1rem;
     padding: .5rem;
 }
 
@@ -85,11 +102,14 @@ main{
     padding-top: 10rem;
 }
 
-@media only screen and (max-width: 600px) {
-    header nav {
+@media only screen and (max-width: 760px) {
+    header ul {
         display: none;
     }
     #logo-text{
         display: none;
+    }
+    #burger-menu{
+        display: block;
     }
 }
