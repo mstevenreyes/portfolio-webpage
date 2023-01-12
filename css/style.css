@@ -5,7 +5,7 @@
 @tailwind utilities;
 
 body {
-    font-family: 'Noto Serif JP', Arial, Helvetica, sans-serif;
+    font-family: 'Century Gothic', Arial, Helvetica, sans-serif;
     background: rgb(25, 25, 25) no-repeat;
     color: white;
     width: 100%;
@@ -13,7 +13,7 @@ body {
     /* background-size: cover; */
 }
 
-header, header ul, header ul a{
+/* header, header ul, header ul a{
     display: flex;
     color: white;
     text-decoration: none;
@@ -73,7 +73,7 @@ header ul li{
 
 .projects-navigation{
     /* display: flex; */
-    justify-content: center;
+    /* justify-content: center;
 }
 .projects-navigation h5{
     margin: auto 20px;
@@ -95,15 +95,15 @@ header ul li{
 .body-wrap__welcome-content{
     font-size: 1rem;
     padding: .5rem;
-}
+} */
 
-#project-next{
+/* #project-next{
     cursor: pointer;
 }
 
 main{
     padding-top: 10rem;
-}
+} */ 
 
 @media only screen and (max-width: 760px) {
     header ul {

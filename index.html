@@ -14,33 +14,64 @@
     <script src="https://kit.fontawesome.com/a398ec554b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header>
-        <div id="logo-brand">
-            <p><img src="images/logo.png" alt=""></p>
-            <h3 id="logo-text">Steven Reyes</h3>
+    <header class="flex">
+        <div class="flex container max-w-xs mr-auto ml-20 mt-5">
+            <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span>
+            <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
         </div>
-        <div class="menu-wrapper">
-            <p id="burger-menu"><i class="fa-solid fa-bars fa-lg"></i></p>
-            <ul>
-                <li><a href="#"><p>Work</p></a></li>
-                <li><a href="#"><p>Contact</p></a></li>
-                <li><a href="#"><p>Resume</p></a></li>
+        <div class="container max-w-max ml-auto text-xl mt-5 mr-20">
+            <!-- <p id="burger-menu"><i class="fa-solid fa-bars fa-lg"></i></p> -->
+            <ul class="flex">
+                <span class="mt-3"><li><a href="#"><p>Work</p></a></li></span>
+                <span class="mt-3 mx-5"><li><a href="#"><p>Contact</p></a></li></span>
+                <span class="mt-3"><li><a href="#"><p>Resume</p></a></li></span>
             </ul>
         </div>
        
     </header>
     <main>
-        <div class="body-wrap center">
-            <div class="body-wrap__welcome-content">
-                <h1>Full Stack Developer | Freelancer</h1>
-                <span class="projects-navigation"><h5>Projects</h5><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span>
+        <section id="top-page">
+            <div class="text-center mt-52">
+                <h1 class="text-5xl mb-10">Mark Steven Reyes</h1>
+                <h5 class="mb-32" >Full Stack Developer | Freelancer</h5>
+                <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
             </div>
-           
-        </div>
-        <div>
+        </section>
+        <section id="dev-projects" class="p-16">
+            <div class="container mx-auto text-center mb-5 mt-10">
+                <p class="mb-10 text-2xl">Development Projects</p>
+                <ul class="flex justify-center">
+                    <span class="mx-5">
+                        <li>
+                            <img src="./images/project-1.png" alt="" width="400rem">
+                            <p class="mt-10 mb-5 text-xl">X-Wing</p>
+                            <p class="text-sm">University Style Ticketing System</p>
+                        </li>
+                    </span>
+                    <span class="mx-5">
+                        <li>
+                            <img src="./images/project-2.png" alt="" width="400rem">
+                            <p class="mt-10 mb-5 text-xl">RogueOne</p>
+                            <p class="text-sm">PUV Operations Management System</p>
+                        </li>
+                    </span>
+                    <span class="mx-5">
+                        <li>
+                            <img src="./images/project-3.png" alt="" width="400rem">
+                            <p class="mt-10 mb-5 text-xl">Windu</p>
+                            <p class="text-sm">PUV Operations Management System</p>
+                        </li>
+                    </span>
+                </ul>
+            </div>
             
-        </div>
+        </section>
+        <section id="contact">
 
+        </section>
+        <footer>
+
+        </footer>
     </main>
     
 </body>
