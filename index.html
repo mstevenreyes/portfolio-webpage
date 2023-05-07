@@ -17,107 +17,135 @@
     <script src="https://kit.fontawesome.com/a398ec554b.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="flex">
-        <div class="flex container max-w-xs mr-auto ml-20 mt-5">
-            <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span>
+    <header class="flex flex-wrap">
+        <div class="flex justify-center mt-4 ml-5">
+            <span>
+                <p>mstevenreyes.tech</p>
+            </span>
+            <!-- <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span> -->
             <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
         </div>
-        <div class="container hidden md:flex max-w-max ml-auto text-xl mt-5 mr-20">
-            <!-- <p id="burger-menu"><i class="fa-solid fa-bars fa-lg"></i></p> -->
-            <ul class="flex">
-                <!-- <span class="mt-3 mx-5"><li><a href="#"><p>Work</p></a></li></span> -->
-                <!-- <span class="mt-3 mx-5"><li><a href="#"><p>Contact</p></a></li></span> -->
-                <span class="mt-3"><li><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
-            </ul>
+        <div class="flex justify-center md:flex text-xl mt-4 ml-auto">
+            <span class="mr-5 lg:hidden">
+                <p id="burger-menu"><i class="fa-regular fa-square-caret-down"></i></p>
+            </span>
+            <!-- <ul class="flex text-base">
+                <span class="mr-64 hover:underline"><li><a href="#"><p>Projects</p></a></li></span>
+                <span class="mr-64 hover:underline"><li><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
+                <span class="hover:underline"><li><a href="#"><p>Contact</p></a></li></span>
+            </ul> -->
         </div>
        
     </header>
     <main>
-        <section id="welcome">
-            <div class="flex justify-center mt-52 ml-20">   
-                <div>
-                    <h1 class="text-5xl mb-8">Hi! I'm Steven.</h1>
-                    <h5 class="text-left max-w-xs" >I am a front-end developer and I use the following tech stacks:</h5>
-                    <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
-                    <div id="icons" class="flex">
-                        <img src="./images/html-5.png" alt="html5">
-                        <img src="./images/css-3.png" alt="css3">
-                        <img src="./images/java-script.png" alt="javascript">
-                        <img src="./images/react.png" alt="react">
-                    </div>
+        <section id="welcome" class="h-screen w-full">
+            <div class="flex flex-wrap justify-center md:pt-28 lg:pt-44">   
+                <!-- welcome text -->
+                <div id="welcome-text" class="flex order-2 lg:order-1 lg:mr-20 justify-center mt-12">
+                    <div class="w-full text-center">
+                        <div>
+                            <b><h1 class="text-2xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class="glass px-2">Steven!</span></h1></b>
+                                <div class="mx-14 lg:mx-0">  
+                                    <h5 class="text-center lg:text-left mx md:mx-48 lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer and I use the following tech stacks:</h5>
+                                </div>    
+                            <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
+                            <div id="icons" class="flex justify-center lg:justify-start">
+                                <img src="./images/html-5.png" alt="html5">
+                                <img src="./images/css-3.png" alt="css3">
+                                <img src="./images/java-script.png" alt="javascript">
+                                <img src="./images/react.png" alt="react">
+                            </div>
+                        </div>
+                    </div>       
                 </div>
-                
-                <div class="ml-20" id="profile-image">
-                    <img src="./images/profile_picture_blob.png" alt="profile-picture">
+                <!-- profile image -->
+                <div id="profile-image" class="flex order-1 lg:order-2 lg:max-w-xs pt-28 lg:pt-0 justify-center lg:ml-20">
+                    <img class="max-w-xs w-40 md:w-56 lg:w-80" src="./images/profile_picture_blob.png" alt="profile-picture">
                 </div>
+            </div>
+            <div class="flex justify-center mt-16 lg:mt-32 xl:mt-52">
+                <span class="text-lg">
+                    <a href="#dev-projects">
+                        <button id="go-down-button" class="w-max hover:bg-slate-100 hover:text-black px-7"><i class="fa-solid fa-angles-down"></i></button>
+                    </a>
+                </span> 
             </div>
         </section>
-        <section id="dev-projects" class="p-16">
-            <div id="personal-projects" class="container mx-auto text-center mb-52 mt-10">
-                <p class="mb-10 text-2xl">Personal Projects</p>
-                <ul class="flex justify-center flex-wrap">
-                    <span class="mx-5">
-                        <li>
-                            <img src="./images/project-1.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">University Helpdesk</p>
-                        </li>
-                    </span>
-                    <span class="mx-5">
-                        <li>
-                            <img src="./images/project-2.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">PUV Operations Management System</p>
-                        </li>
-                    </span>
-                    <span class="mx-5">
-                        <li>
-                            <img src="./images/project-3.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">Biometrics Attendance Desktop App</p>
-                        </li>
-                    </span>
-                </ul>
+        <section id="dev-projects" class="text-white">
+            <div class="glass-projects w-full h-full py-20">
+                <div id="personal-projects" class="container mx-auto text-center">
+                    <p class="mb-10 text-2xl">Personal Projects</p>
+                    <ul class="flex justify-center flex-wrap">
+                        <span class="mx-5">
+                            <li>
+                                <img src="./images/project-1.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">University Helpdesk</p>
+                            </li>
+                        </span>
+                        <span class="mx-5">
+                            <li>
+                                <img src="./images/project-2.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">PUV Operations Management System</p>
+                            </li>
+                        </span>
+                        <span class="mx-5">
+                            <li>
+                                <img src="./images/project-3.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">Biometrics Attendance Desktop App</p>
+                            </li>
+                        </span>
+                    </ul>
+                </div>
+                <div id="client-projects" class="container mx-auto text-center mb-5 mt-10">
+                    <p class="mb-10 text-2xl">Client Projects</p>
+                    <ul class="flex justify-center flex-wrap">
+                        <span class="mx-5 ">
+                            <li>
+                                <img src="./images/project-4.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">RedTech</p>
+                                <p class="text-sm">Invoice Inventory System</p>
+                            </li>
+                        </span>
+                        <span class="mx-5 basis-auto">
+                            <li>
+                                <img src="./images/project-5.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">JasTech</p>
+                                <p class="text-sm">Landing Site</p>
+                            </li>
+                        </span>
+                        <span class="mx-5 basis-auto">
+                            <li>
+                                <img src="./images/project-6.jpg" alt="" width="400rem">
+                                <p class="mt-10 mb-5 text-xl">Alfawhite</p>
+                                <p class="text-sm">Landing Site</p>
+                            </li>
+                        </span>
+                    </ul>
+                </div>
             </div>
-            <div id="client-projects" class="container mx-auto text-center mb-5 mt-10">
-                <p class="mb-10 text-2xl">Client Projects</p>
-                <ul class="flex justify-center flex-wrap">
-                    <span class="mx-5 ">
-                        <li>
-                            <img src="./images/project-4.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">RedTech</p>
-                            <p class="text-sm">Invoice Inventory System</p>
-                        </li>
-                    </span>
-                    <span class="mx-5 basis-auto">
-                        <li>
-                            <img src="./images/project-5.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">JasTech</p>
-                            <p class="text-sm">Landing Site</p>
-                        </li>
-                    </span>
-                    <span class="mx-5 basis-auto">
-                        <li>
-                            <img src="./images/project-6.jpg" alt="" width="400rem">
-                            <p class="mt-10 mb-5 text-xl">Alfawhite</p>
-                            <p class="text-sm">Landing Site</p>
-                        </li>
-                    </span>
-                </ul>
-            </div>
-            
         </section>
         <section id="contact">
 
         </section>
-        <footer class="">
-            <div class="text-center  pt-10 pb-10">
-
-                <!-- <h4>Socials</h4> -->
-                <a href="https://github.com/mstevenreyes" target="_blank"><i class="fa-brands fa-github-alt fa-lg px-3"></i></a>
-                <a href="https://www.linkedin.com/in/mstevenreyes/" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg px-3"></i></a>
-                <a href="https://www.facebook.com/msdvreyes/" target="_blank"><i class="fa-brands fa-facebook-f fa-lg px-3"></i></a>
-            </div>
-            
-        </footer>
+     
     </main>
-    
+    <footer class="flex flex-wrap pt-16">
+        <div id="footer-1" class="w-full grow text-left ml-5"><span class="text-sm">
+            <span class="text-sm lg:text-md">
+                <p>Mark Steven Reyes</p>
+            </span>
+            <span class="text-xs lg:text-sm opacity-60 w-20 font-mono"><p>© 2023, Designed and created by Mark Steven Reyes</p></span>
+        </div>
+        <div id="footer-2" class="w-full grow text-center pt-10 pb-10">
+            <!-- <h4>Socials</h4> -->
+            <a href="https://github.com/mstevenreyes" target="_blank"><i class="fa-brands fa-github-alt fa-lg px-3"></i></a>
+            <a href="https://www.linkedin.com/in/mstevenreyes/" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg px-3"></i></a>
+            <a href="https://www.facebook.com/msdvreyes/" target="_blank"><i class="fa-brands fa-facebook-f fa-lg px-3"></i></a>
+        </div>
+        <div id="footer-3" class="grow w-full">
+            <!--  -->
+        </div>
+    </footer>
+    <script src="./scripts/scripts.js"></script>
 </body>
 </html>
