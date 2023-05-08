@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Reyes | Front-End Developer)</title>
+    <title>Steven Reyes | Front-End Developer</title>
     <meta name="description" content="Hi! I'm Steven Reyes and I use MERN Stack as my main tool for developing websites.">
     <meta property="og:image"  content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png">
     <meta name="twitter:image" content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png">
@@ -18,52 +18,53 @@
 </head>
 <body>
     <header class="flex flex-wrap">
-        <div class="flex justify-center mt-4 ml-5">
+        <div class="absolute justify-center mt-4 ml-5">
             <span>
                 <p>mstevenreyes.tech</p>
             </span>
             <!-- <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span> -->
             <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
         </div>
-        <div class="flex justify-center md:flex text-xl mt-4 ml-auto">
-            <span class="mr-5 lg:hidden">
-                <p id="burger-menu"><i class="fa-regular fa-square-caret-down"></i></p>
-            </span>
-            <!-- <ul class="flex text-base">
-                <span class="mr-64 hover:underline"><li><a href="#"><p>Projects</p></a></li></span>
-                <span class="mr-64 hover:underline"><li><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
-                <span class="hover:underline"><li><a href="#"><p>Contact</p></a></li></span>
-            </ul> -->
+        <span class="ml-auto mt-4 mr-5 xl:hidden">
+            <p id="burger-menu"><i class="fa-regular fa-square-caret-down"></i></p>
+        </span>
+        <div id="navbar-links" class="hidden xl:flex w-full justify-center text-xl mt-4 ml-auto">
+            <ul class="flex flex-col w-full text-center lg:flex-row text-base lg:justify-center">
+                <span class="lg:mr-64 hover:underline"><li><a href="#dev-projects"><p>Projects</p></a></li></span>
+                <span class="lg:mr-64  hover:underline mt-5 lg:mt-0"><li><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
+                <span class="hover:underline mt-5 lg:mt-0"><li><a href="#contact"><p>Contact</p></a></li></span>
+            </ul>
         </div>
        
     </header>
     <main>
-        <section id="welcome" class="h-screen w-full">
-            <div class="flex flex-wrap justify-center md:pt-28 lg:pt-44">   
+        <section id="welcome" class="flex flex-col justify-center items-center pb-28 lg:pb-0 h-screen w-full">
+            <div class="flex flex-wrap justify-center pt-12 md:pt-12 xl:pt-16">   
                 <!-- welcome text -->
                 <div id="welcome-text" class="flex order-2 lg:order-1 lg:mr-20 justify-center mt-12">
                     <div class="w-full text-center">
                         <div>
-                            <b><h1 class="text-2xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class="glass px-2">Steven!</span></h1></b>
+                            <b><h1 class="text-xl md:text-4xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class="glass px-2">Steven!</span></h1></b>
                                 <div class="mx-14 lg:mx-0">  
-                                    <h5 class="text-center lg:text-left mx md:mx-48 lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer and I use the following tech stacks:</h5>
+                                    <h5 class="text-center md:text-2xl lg:text-left lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer and I use the following tech stack:</h5>
                                 </div>    
                             <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
                             <div id="icons" class="flex justify-center lg:justify-start">
-                                <img src="./images/html-5.png" alt="html5">
-                                <img src="./images/css-3.png" alt="css3">
-                                <img src="./images/java-script.png" alt="javascript">
-                                <img src="./images/react.png" alt="react">
+                                <img src="./images/html-5.svg" alt="html5">
+                                <img src="./images/css-3.svg" alt="css3">
+                                <img src="./images/java-script.svg" alt="javascript">
+                                <img src="./images/react.svg" alt="react">
+                                <img src="./images/tailwind-css.svg" alt="tailwind">
                             </div>
                         </div>
                     </div>       
                 </div>
                 <!-- profile image -->
-                <div id="profile-image" class="flex order-1 lg:order-2 lg:max-w-xs pt-28 lg:pt-0 justify-center lg:ml-20">
-                    <img class="max-w-xs w-40 md:w-56 lg:w-80" src="./images/profile_picture_blob.png" alt="profile-picture">
+                <div id="profile-image" class="flex order-1 lg:order-2 lg:max-w-xs lg:pt-0 justify-center lg:ml-20">
+                    <img class="max-w-xs w-40 md:w-56 lg:w-80" src="./images/profile_picture_blob_optimized.png" alt="profile-picture">
                 </div>
             </div>
-            <div class="flex justify-center mt-16 lg:mt-32 xl:mt-52">
+            <div class="flex justify-center mt-16 xl:mt-28">
                 <span class="text-lg">
                     <a href="#dev-projects">
                         <button id="go-down-button" class="w-max hover:bg-slate-100 hover:text-black px-7"><i class="fa-solid fa-angles-down"></i></button>
@@ -124,8 +125,32 @@
                 </div>
             </div>
         </section>
-        <section id="contact">
-
+        <section id="contact" class="flex justify-center pt-5">
+            <div class="w-max ml-10 mr-10">
+                <div id="form-header" class="flex">
+                    <div id="form-header-logo" class="w-8 filter-orange mr-2">
+                        <img src="./images/coffee-cup.svg" alt="coffee-cup">
+                    </div>
+                    <div class="mt-3">Let's have a chat:</div>
+                </div>
+                <div id="form-body" class="flex flex-wrap flex-col text-black">
+                    <form id="contact-me" action="https://formspree.io/f/mdovkonl" method="POST">
+                        <div class="w-full text-white">
+                            <label for="name">Name:</label>
+                        </div>
+                        <input type="text" name="name" id="name">
+                        <div class="w-full text-white rounded-sm">
+                            <label for="email">Email:</label>
+                        </div>
+                        <input type="text" name="email" id="email">
+                        <div class="w-full text-white">
+                            <label for="message">Message</label>
+                        </div>
+                        <textarea name="message" id="message" cols="30" rows="10"></textarea>
+                    </form>
+                    <button type="submit" form="contact-me">submit</button>
+                </div>
+            </div>
         </section>
      
     </main>

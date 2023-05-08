@@ -8,3 +8,9 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         });
 });
+
+const toggleButton = document.getElementById("burger-menu");
+const navBarLinks = document.getElementById("navbar-links");
+toggleButton.addEventListener("click", () => {
+    navBarLinks.classList.toggle("active");
+});
