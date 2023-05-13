@@ -77,7 +77,7 @@ background: transparent;
 }
 
 #dev-projects {
-    /* background: url(".../images/bg_galaxy.jpg"); */
+    /* background: url("../images/bg_galaxy.jpg"); */
     background-size: cover;
     
 }
