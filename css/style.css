@@ -5,12 +5,27 @@ html{
 }
 
 body {
-    font-family: 'Source Code Pro', monospace, Arial, Helvetica, sans-serif;
-    background: rgb(16, 16, 16) no-repeat;
+    font-family: 'Manrope', monospace, Arial, Helvetica, sans-serif;
     color: white;
+    height: 100%;
     margin: 0;
     padding: 0;
-    /* background-size: cover; */
+    position: relative;
+}
+
+body::before {
+    background: radial-gradient(
+        500px circle at var(--mouse-x) var(--mouse-y), rgba(29, 78, 216, 0.15), transparent 80%);
+    border-radius: inherit;
+    content: "";
+    height: 100%;
+    width: 100%;
+    left: 0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: -2;
+    filter: blur(40px);
 }
 
 .navicon {
@@ -18,14 +33,68 @@ body {
     display: block;
     height: 2px;
     position: relative;
-    transition: background .2s ease-out;
+    transition: .2s ease-out;
     width: 18px;
-  }
-
-header {
-    /* height: 168px; */
 }
 
+#projects-btn,
+#resume-btn,
+#contact-btn {
+    opacity: 0;
+    animation: fadeDown 8s ease forwards;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+@keyframes fadeDown {
+    20% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+
+    30%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCustom {
+    20% {
+        opacity: 0;
+    }
+
+    30%, 100% {
+        opacity: 1;
+    }
+}
+
+#logo-text {
+    opacity: 0;
+    animation: fadeInCustom 8s ease-in-out forwards;
+    animation-delay: calc(var(--order) * 200ms);
+}
+/* About Me CSS */
+
+.tech-stack-container > div > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tech-stack-container > div > ul > li{
+    /* From https://css.glass */
+    padding: 8px;
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: .2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    margin-right: .5rem;
+    margin-bottom: .5rem;
+    
+}
+
+
+/* === About Me END == */
 #icons img {
     width: 2.5em;
     margin-top: .8em;
@@ -43,33 +112,39 @@ header {
   width: 100%;
 }
 
-.menu-btn {
-    display: none;
-}
-
-.menu-btn:checked ~ .menu {
-max-height: 240px;
-}
-
-.menu-btn:checked ~ .menu-icon .navicon {
-background: transparent;
-}
-
-/* #profile-image img{
-    max-width: 17em;
-} */
-
 #go-down-button {
-    transition-duration: .1s;
+    transition: all .3s ease;
     border-radius: 10em;
+    color: #FFFFFF;
 }
 
-#go-down-button:hover {
-    background-color: rgba(252, 252, 252, 0.772);
+@media (hover: hover) {
+    #go-down-button:hover {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.233);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        /* border: 1px solid rgba(255, 255, 255, 0.171); */
+    }
+}
+
+@media (hover: none) {
+    #go-down-button:hover {
+        /* From https://css.glass */
+        background: rgba(255, 255, 255, 0.089);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px);
+        /* border: 1px solid rgba(255, 255, 255, 0.171); */
+    }
 }
 
 #go-down-button:active {
     border: none;
+    background-color: rgba(0, 0, 0, 0.1);
 }
 
 #welcome {
@@ -87,26 +162,22 @@ background: transparent;
 }
 
 #navbar-links.active {
-    display: flex !important;
+    display: flex;
 }
 
-/* #personal-projects {
-    background: rgba( 255, 255, 255, 0.3 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 3px );
-    -webkit-backdrop-filter: blur( 3px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-} */
+#navbar-links {
+    transition: max-height 1s ease;
+}
 
 .glass {
-    background: rgba( 255, 255, 255, 0.4 );
+    background: rgba(255, 255, 255, 0.24);
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 7.5px );
     -webkit-backdrop-filter: blur( 7.5px );
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
+
 .glass-projects {
     width: 100%;
     height: 100%;
@@ -123,19 +194,36 @@ background: transparent;
 }
 
 input[type=text], textarea {
-    color: #000000;
-    border-radius: 1rem;
-    padding: .5rem;
+    padding: 5px;
+    color: #FFFFFF;
+    background: rgba( 255, 255, 255, 0.2 );
+    backdrop-filter: blur( 9px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
 }
-input[type=text]:focus, textarea:focus {
-    outline: rgb(243, 123, 75);
-}
-
 
 textarea {
     width: 100%;
     max-width: 25rem;
+    transition: .3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.1)
 }
+
+textarea:focus, 
+textarea:hover,
+input[type=text]:focus, 
+input[type=text]:hover{
+    /* From https://css.glass */
+    background: rgba( 255, 255, 255, 0.2 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3px );
+    -webkit-backdrop-filter: blur( 9px );
+    border-radius: 10px;
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    outline: none;
+}
+
 
 button[type=submit] {
     background-color: white;
@@ -143,132 +231,6 @@ button[type=submit] {
     width: max-content;
     padding: .5rem 1rem;
 }
-
-/* header, header ul, header ul a{
-    display: flex;
-    color: white;
-    text-decoration: none;
-}
-
-header ul a{
-    margin: 0rem .4rem;
-    padding: .1rem .4rem .1rem .4rem;
-    border: 1px solid rgba(7, 0, 0, 0);
-    transition-duration: .2s;
-}
-
-header ul{
-    height: max-content;
-    margin-top: .5rem;
-    margin-left: auto;
-}
-
-header ul a:hover{
-    border: .05rem solid white;
-    color: rgba(255, 255, 255, 0.83);
-}
-
-header ul li{
-    list-style: none;
-}
-.menu-wrapper{
-    display: flex;
-    margin-left: auto;
-
-    margin-right: 5%;
-}
-.center{
-    text-align: center;
-    margin: 0px auto;
-}
-#burger-menu{
-    display: none;
-    background-color: rgba(255, 255, 255, 0);
-    color: rgb(219, 219, 219);
-    margin-top: 2rem;
-    border: none;
-    cursor: pointer;
-    height: max-content;
-}
-#logo-brand{
-    display: flex;
-    margin-left: 2rem;
-    height: max-content;
-}
-#logo-brand img{
-    width: 50px;
-}
-#logo-brand h3{
-    margin: auto 0px auto 1.2rem;
-}
-
-.projects-navigation{
-    /* display: flex; */
-    /* justify-content: center;
-}
-.projects-navigation h5{
-    margin: auto 20px;
-}
-.projects-navigation button{
-    background-color: rgba(7, 0, 0, 0);
-    border: .05rem solid rgba(255, 255, 255, 0);
-    padding: 10px 13px;
-    border-radius: 10rem;
-    margin: auto 0rem;
-    transition-duration: .2s;
-    color: rgba(255, 255, 255, 0.763);
-}
-.projects-navigation button:hover{
-    border: 1px solid rgba(255, 255, 255, 0.763);
-    margin: auto 0rem;
-}
-
-.body-wrap__welcome-content{
-    font-size: 1rem;
-    padding: .5rem;
-} */
-
-/* #project-next{
-    cursor: pointer;
-}
-
-main{
-    padding-top: 10rem;
-} */ 
-
-/* Media queries */
-
-/* @media only screen and (max-width: 760px) {
-    #profile-image img {
-        max-width: 12em;
-    }
-    #icons img {
-        width: 2em;
-        margin: .8em 1em 0 0;
-    }
-    #icons {
-        justify-content: center;
-    }
-    #welcome-text {
-        width: 100%;
-        margin-left: 1em;
-        margin-right: 1em;
-        text-align: center;
-    }
-
-    #profile-image {
-        padding-top: 9em;
-    }
-    header ul {
-        display: none;
-    }
-    #logo-text{
-        display: none;
-    }
-    #burger-menu{
-        display: block;
-    }
-} */
 
 /* xl screen */
 @media only screen and (min-width: 1280px) {
@@ -282,4 +244,39 @@ main{
     #footer-1, #footer-2, #footer-3 {
         width: 33%;
     }
+}
+
+@media only screen and (max-width: 1280px) {
+    body::before {
+        display: none;
+    }
+    #logo-text {
+        opacity: 0;
+        animation: fadeInCustom 6s ease forwards;
+        animation-delay: calc(var(--order) * 200ms);
+    }
+    #projects-btn,
+    #resume-btn,
+    #contact-btn {
+        opacity: 0;
+        animation: fadeDown 4s ease forwards;
+        animation-delay: calc(var(--order) * 200ms);
+    }
+
+    @keyframes fadeDown {
+    
+        10%, 100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes fadeInCustom {
+
+    
+        30%, 100% {
+            opacity: 1;
+        }
+    }
+    
 }

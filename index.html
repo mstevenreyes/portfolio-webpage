@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Steven Reyes | Front-End Developer</title>
+    <title>Steven Reyes</title>
     <meta name="description" content="Hi! I'm Steven Reyes and I use MERN Stack as my main tool for developing websites.">
     <meta property="og:image"  content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png">
     <meta name="twitter:image" content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@200;300;400;500;600;700;800&family=Source+Code+Pro:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./dist/output.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.css">
@@ -19,11 +19,11 @@
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <script src="https://kit.fontawesome.com/a398ec554b.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <header class="flex flex-wrap">
+<body class="body bg-slate-900 scroll-smooth">
+    <header class="flex flex-wrap pt-2">
         <div class="absolute justify-center mt-4 ml-5">
             <span>
-                <p>mstevenreyes.tech</p>
+                <p id="logo-text" class="text-cyan-200 text-opacity-90" style="--order: 4">mstevenreyes.tech</p>
             </span>
             <!-- <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span> -->
             <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
@@ -33,9 +33,9 @@
         </span>
         <div id="navbar-links" class="hidden xl:flex w-full justify-center text-xl mt-4 ml-auto">
             <ul class="flex flex-col w-full text-center lg:flex-row text-base lg:justify-center">
-                <span class="lg:mr-64 hover:underline"><li><a href="#dev-projects"><p>Projects</p></a></li></span>
-                <span class="lg:mr-64  hover:underline mt-5 lg:mt-0"><li><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
-                <span class="hover:underline mt-5 lg:mt-0"><li><a href="#contact"><p>Contact</p></a></li></span>
+                <span class="lg:mr-64 hover:underline"><li id="projects-btn" style="--order: 3"><a href="#dev-projects"><p>Projects</p></a></li></span>
+                <span class="lg:mr-64  hover:underline mt-5 lg:mt-0"><li id="resume-btn" style="--order: 2"><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
+                <span class="hover:underline mt-5 lg:mt-0"><li id="contact-btn" style="--order: 1"><a href="#contact"><p>Contact</p></a></li></span>
             </ul>
         </div>
        
@@ -47,42 +47,83 @@
                 <div id="welcome-text" class="flex order-2 lg:order-1 lg:mr-20 justify-center mt-12">
                     <div class="w-full text-center">
                         <div>
-                            <b><h1 class="text-xl md:text-4xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class="glass px-2">Steven!</span></h1></b>
+                            <b><h1 class="text-xl md:text-4xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class=" glass px-2">Steven!</span></h1></b>
                                 <div class="mx-14 lg:mx-0">  
-                                    <h5 class="text-center md:text-2xl lg:text-left lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer and I use the following tech stack:</h5>
+                                    <h5 class="text-center font-extralight md:text-2xl lg:text-left lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer based on Manila, Philippines.</h5>
                                 </div>    
                             <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
-                            <div id="icons" class="flex justify-center lg:justify-start">
-                                <img src="./images/html-5.svg" alt="html5">
+                            <div id="icons" class="flex justify-center lg:justify-start pt-6 text-3xl text-cyan-500">
+                                <a href="#"><p><i class="fa-brands fa-github"></i></p></a>
+                                <a href="#"><p class="ml-5"><i class="fa-brands fa-linkedin"></i></p></a>
+                                <a href="#"><p class="ml-5"><i class="fa-brands fa-facebook"></i></p></a>
+                                <!-- <img src="./images/html-5.svg" alt="html5">
                                 <img src="./images/css-3.svg" alt="css3">
                                 <img src="./images/java-script.svg" alt="javascript">
                                 <img src="./images/react.svg" alt="react">
-                                <img src="./images/tailwind-css.svg" alt="tailwind">
+                                <img src="./images/tailwind-css.svg" alt="tailwind"> -->
                             </div>
+                            <!-- <div class="flex">
+                                <button class="text-xl text-slate-300 border-white rounded-md p-7 ">HIRE ME</button>
+                            </div> -->
                         </div>
                     </div>       
                 </div>
                 <!-- profile image -->
-                <div id="profile-image" class="flex order-1 lg:order-2 lg:max-w-xs lg:pt-0 justify-center lg:ml-20">
+                <div id="profile-image" class="flex items-center order-1 lg:order-2 lg:max-w-xs lg:pt-0 justify-center lg:ml-20">
                     <img class="max-w-xs w-40 md:w-56 lg:w-80" src="./images/profile_picture_blob_optimized.webp" alt="profile-picture">
                 </div>
             </div>
             <div class="flex justify-center mt-16 xl:mt-28">
                 <span class="text-lg">
-                    <a href="#dev-projects">
-                        <button id="go-down-button" class="w-max hover:bg-slate-100 hover:text-black px-7"><i class="fa-solid fa-angles-down"></i></button>
+                    <a href="#about-me">
+                        <button id="go-down-button" class="w-max hover:bg-slate-100 px-7"><i class="fa-solid fa-angles-down"></i></button>
                     </a>
                 </span> 
             </div>
         </section>
+        <section id="about-me" class="flex items-center min-h-screen" pt-5 pb-5">
+            <div class="about-me-container flex flex-col xl:flex-row justify-center text-white">
+                <div class="order-2 xl:order-1 mx-7 pt-8 pb-16 xl:w-4/12">
+                    <div class="tech-stack-container flex flex-col">
+                        
+                        <div>   
+                            <ul>
+                                <li>JavaScript</li>
+                                <li>React</li>
+                                <li>Next.js</li>
+                                <li>jQuery</li>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>Wordpress</li>
+                                <li>WooCommerce</li>
+                                <li>Drupal</li>
+                            </ul>
+                        </div>
+                        
+                    </div>
+                    <h2 class="text-2xl xl:text-5xl font-bold pt-8">About Me</h2>
+                    <p class="text-xl font-bold mt-5">Building stuff is awesome.</p>
+                    <p class="mt-5">I was introduced in web development in 2012 at age 12 in an extracurricular activity. During those moments, I was able to realize the creative side of technology and had a lot of fun creating it using basic HTML/CSS. </p>
+                    <!-- <a href="#"><p class="text-cyan-300 font-semibold mt-5">Keep reading my bio</p></a> -->
+                    
+                </div>
+                
+                <div class="rounded-lg xl:order-2 mx-7 max-w-sm">
+                    <img class="rounded-lg" src="./images/about-me-picture.jpg" alt="picture of steven reyes">
+                </div>
+            </div>
+        </section>
         <section id="dev-projects" class="text-white min-h-screen">
-            <div class="glass-projects w-full h-full py-20">
+            <div class="projects-container w-full h-full py-20">
                 <div id="personal-projects" class="container mx-auto text-center">
                     <p class="mb-10 text-2xl">Personal Projects</p>
                     <ul class="flex justify-center flex-wrap">
                         <span class="mx-5">
                             <li>
-                                <img src="./images/project-1.webp" alt="" width="400rem">
+                                <div class="card">
+                                    <img src="./images/project-1.webp" alt="" width="400rem">
+                                </div>
+                                
                                 <p class="mt-10 mb-5 text-xl">University Helpdesk</p>
                             </li>
                         </span>
@@ -145,7 +186,7 @@
                         <div class="w-full text-white rounded-sm">
                             <label for="email">Email:</label>
                         </div>
-                        <input type="text" name="email" id="email" required>
+                        <input  type="text" name="email" id="email" required>
                         <div class="w-full text-white">
                             <label for="message">Message</label>
                         </div>
