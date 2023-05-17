@@ -1,12 +1,78 @@
+:root {
+    --cyan-highlight: rgb(70, 226, 250);
+    --cyan-bg: rgb(15 23 42);
+}
 
+/* Utility classes */
 
+.move-up {
+    transform: translateY(0);
+    transition: all .2s ease-in-out;
+}
+
+.move-up:hover {
+    transform: translateY(-10%);
+    transition: all .2s ease-in-out;
+}
+
+.fade-up {
+    animation: fadeUp 5s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+/* Utility classes end */
+
+/* Animations */
+
+@keyframes fadeDown {
+    20% {
+        opacity: 0;
+        transform: translateY(-80%);
+    }
+
+    30%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInCustom {
+    20% {
+        opacity: 0;
+    }
+
+    30%, 100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    25% {
+        opacity: 0;
+        transform: translateY(30%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(30%);
+    }
+
+    40%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animations end */
 html{
     font-size: 16px;
 }
 
 body {
-    font-family: 'Manrope', monospace, Arial, Helvetica, sans-serif;
+    font-family: 'Inter', monospace, Arial, Helvetica, sans-serif;
     color: white;
+ 
     height: 100%;
     margin: 0;
     padding: 0;
@@ -39,39 +105,19 @@ body::before {
 
 #projects-btn,
 #resume-btn,
-#contact-btn {
+#contact-btn,
+#logo-text {
     opacity: 0;
     animation: fadeDown 8s ease forwards;
     animation-delay: calc(var(--order) * 200ms);
 }
 
-@keyframes fadeDown {
-    20% {
-        opacity: 0;
-        transform: translateY(-80%);
-    }
 
-    30%, 100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInCustom {
-    20% {
-        opacity: 0;
-    }
-
-    30%, 100% {
-        opacity: 1;
-    }
-}
-
-#logo-text {
+/* #logo-text {
     opacity: 0;
     animation: fadeInCustom 8s ease-in-out forwards;
     animation-delay: calc(var(--order) * 200ms);
-}
+} */
 /* About Me CSS */
 
 .tech-stack-container > div > ul {
@@ -90,7 +136,21 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.18);
     margin-right: .5rem;
     margin-bottom: .5rem;
-    
+    transition: all .1s ease-in-out;
+    cursor: default;
+    user-select: none;
+}
+
+.tech-stack-container > div > ul > li:hover {
+    background-color: rgba(23, 90, 101, 0.733);
+}
+
+#bio-btn {
+    transition: transform .2s ease-in-out;
+}
+
+#bio-btn:hover{
+   transform: translateY(-15%); 
 }
 
 
@@ -151,11 +211,31 @@ body::before {
 
 }
 
-#dev-projects {
-    /* background: url("../images/bg_galaxy.jpg"); */
-    background-size: cover;
-    
+
+.line {
+    display: inline-block;
+    background-color: #ffffff78;
+    height: .05rem;
+    border-radius: 5px;
 }
+/* DEV PROJECTS SECTION START */
+
+.glass {
+    /* From https://css.glass */
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: .2rem;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.project-card {
+    margin-top: 2.5rem;
+}
+
+
+/* DEV PROJECTS END */
 
 #burger-menu {
     cursor: pointer;
@@ -167,26 +247,6 @@ body::before {
 
 #navbar-links {
     transition: max-height 1s ease;
-}
-
-.glass {
-    background: rgba(255, 255, 255, 0.24);
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 7.5px );
-    -webkit-backdrop-filter: blur( 7.5px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-}
-
-.glass-projects {
-    width: 100%;
-    height: 100%;
-    /* From https://css.glass */
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(13.5px);
-    -webkit-backdrop-filter: blur(13.5px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .filter-orange {
@@ -232,14 +292,60 @@ button[type=submit] {
     padding: .5rem 1rem;
 }
 
+/* Contact Section CSS */
+
+#contact {
+    min-height: 50vh;
+}
+
+
+/* Contact Section CSS END */
+
+/* Footer CSS */
+#footer-2 > div {
+    transition: transform .2s ease-in-out;
+}
+#footer-2 > div:hover {
+    color: var(--cyan-highlight);
+    transform: translateY(-20%)
+}
+
+@keyframes moveUp {
+    to {
+        transform: translateY(-20%);
+    }
+}
+
+/* contact button say hello */
+#contact a[rel="noopener noreferrer"] {
+    display: block;
+    width: 8rem;
+    text-align: center;
+    border: 1px solid var(--cyan-highlight);
+    border-radius: 4px;
+    color: var(--cyan-highlight);
+    padding: 5px 12px;
+}
+
+/* Footer CSS END */
+
 /* xl screen */
 @media only screen and (min-width: 1280px) {
+    .project-card {
+        height: 20rem;
+        width: 30rem;
+    }
+
     header {
         height: max-content;
     }
-    #profile-image img {
+
+/* === DEV PROJECTS SECTION == */
+    #dev-projects {
+        max-width: 65rem;
         
     }
+    
 
     #footer-1, #footer-2, #footer-3 {
         width: 33%;
@@ -247,24 +353,46 @@ button[type=submit] {
 }
 
 @media only screen and (max-width: 1280px) {
+    .line {
+        /* display: none; */
+    }
+
+    .project-card {
+        width: 100%;
+        height: 10rem;
+    }
+
     body::before {
         display: none;
     }
-    #logo-text {
+    /* #logo-text {
         opacity: 0;
         animation: fadeInCustom 6s ease forwards;
         animation-delay: calc(var(--order) * 200ms);
-    }
+    } */
     #projects-btn,
     #resume-btn,
-    #contact-btn {
-        opacity: 0;
-        animation: fadeDown 4s ease forwards;
+    #contact-btn,
+    #logo-text {
+        animation: fadeDown 6s ease-in forwards;
         animation-delay: calc(var(--order) * 200ms);
     }
 
+    @keyframes appear {
+        to {
+            width: max-content;
+        }
+    }
+
     @keyframes fadeDown {
-    
+        0% {
+            opacity: 0;
+            transform: translateY(80%);
+        }
+        5% {
+            opacity: .3;
+            transform: translateY(80%);
+        }
         10%, 100% {
             opacity: 1;
             transform: translateY(0);
