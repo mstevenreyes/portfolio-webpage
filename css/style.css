@@ -16,9 +16,30 @@
 }
 
 .fade-up {
-    animation: fadeUp 3.5s ease-in-out forwards;
+    animation: fadeUp 3.5s ease-in-out normal forwards;
     opacity: 0;
     animation-delay: calc(var(--order) * 200ms);
+}
+
+.fade-up-profile {
+    animation: fadeUpProfile 3.5s ease-in-out forwards;
+    opacity: 0;
+    animation-delay: calc(var(--order) * 200ms);
+}
+
+.duration-4s {
+    animation-duration: 4s;
+}
+
+.slide-upper-left {
+    transform: translate(0%);
+    transition-duration: .2s;
+}
+
+.slide-upper-left:hover {
+    transform: translate(-5%, -11%);
+    /* animation: slideUpperLeft .5s ease-in-out forwards; */
+    transition-duration: .2s;
 }
 
 /* Utility classes end */
@@ -58,9 +79,36 @@
         transform: translateY(30%);
     }
 
-    40%, 100% {
+    45%, 100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes fadeUpProfile {
+    25% {
+        opacity: 0;
+        transform: translateY(10%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translateY(10%);
+    }
+
+    50%, 100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUpperLeft {
+    0% {
+        opacity: 1;
+    }
+
+    20%, 100% {
+        transform: translate(-5%, -15%);
     }
 }
 
@@ -70,7 +118,7 @@ html{
 }
 
 body {
-    font-family: 'Inter', monospace, Arial, Helvetica, sans-serif;
+    font-family: 'Inter', Arial, Helvetica, sans-serif;
     color: white;
  
     height: 100%;
@@ -153,6 +201,16 @@ body::before {
    transform: translateY(-15%); 
 }
 
+/* linkedin, github, facebook icon */
+#icons > a {
+    transform: translateY(0%);
+    transition: all .2s ease-in-out;
+}
+#icons > a:hover {
+    transform: translateY(-10%);
+    transition: all .2s ease-in-out;
+}
+
 
 /* === About Me END == */
 #icons img {
@@ -181,11 +239,12 @@ body::before {
 @media (hover: hover) {
     #go-down-button:hover {
         /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.233);
-        border-radius: 16px;
+        /* background: rgba(255, 255, 255, 0); */
+        background: none;
+        /* border-radius: 16px;
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px);
+        -webkit-backdrop-filter: blur(5.1px); */
         /* border: 1px solid rgba(255, 255, 255, 0.171); */
     }
 }
