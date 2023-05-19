@@ -67,6 +67,8 @@
 
 /* Utility classes end */
 
+
+
 /* Animations */
 
 @keyframes fadeDown {
@@ -187,12 +189,12 @@ body::before {
 
 /* About Me CSS */
 
-.tech-stack-container > div > ul {
+.tech-stack-container > ul {
     display: flex;
     flex-wrap: wrap;
 }
 
-.tech-stack-container > div > ul > li{
+.tech-stack-container > ul > li{
     /* From https://css.glass */
     padding: 8px;
     background: rgba(255, 255, 255, 0.08);
@@ -208,10 +210,10 @@ body::before {
     user-select: none;
 }
 
-.tech-stack-container > div > ul > li:hover {
+.tech-stack-container > ul > li:hover {
     background-color: rgba(23, 90, 101, 0.733);
 }
-
+/*  */
 #bio-btn {
     transition: transform .2s ease-in-out;
 }
@@ -262,6 +264,10 @@ body::before {
 }
 /* DEV PROJECTS SECTION START */
 
+#dev-projects {
+    /* max-width: 1022px; */
+    
+}
 .glass {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
@@ -272,15 +278,11 @@ body::before {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.project-card {
-    margin-top: 2.5rem;
-}
-
 
 /* DEV PROJECTS END */
 
 #burger-menu {
-    fill: var(--navy-white-complement);
+    fill: #FFFFFF;
     height: 2rem;
     cursor: pointer;
 }
@@ -366,10 +368,7 @@ button[type=submit] {
     }
 
 /* === DEV PROJECTS SECTION == */
-    #dev-projects {
-        max-width: 65rem;
-        
-    }
+    
     
 
     #footer-1, #footer-2, #footer-3 {
@@ -382,10 +381,11 @@ button[type=submit] {
         /* display: none; */
     }
 
-    .project-card {
+
+    /* .project-card {
         width: 100%;
         height: 10rem;
-    }
+    } */
 
     /* Hides the mouse gradial design */
     body::before {
@@ -393,15 +393,15 @@ button[type=submit] {
     }
 
     #logo-text {
-        animation: fadeUp 5s ease-in-out forwards 10s;
-        animation-delay: calc(7 * 50ms);
+        animation: fadeUp 6s ease-in-out forwards;
+        /* animation-delay: calc(7 * 50ms); */
     }
 
     #projects-btn,
     #resume-btn,
     #contact-btn
     {
-        animation: fadeUp 3s ease-in-out forwards;
+        animation: fadeUp 5s ease-in-out forwards;
         animation-delay: calc(var(--order) * 50ms);
     }
 
@@ -410,9 +410,9 @@ button[type=submit] {
             opacity: 0;
             transform: translateY(70%);
         }
-        10% {
+        5% {
             opacity: .3;
-            transform: translateY(60%);
+            /* transform: translateY(40%); */
         }
         20%, 100% {
             opacity: 1;
@@ -427,5 +427,20 @@ button[type=submit] {
             opacity: 1;
         }
     }
+
+    @keyframes fadeUpProfile {
+        0% {
+            opacity: 0;
+            transform: translateY(15%);
+        }
+    
+        25% {
+            opacity: 1;
+        }
+    
+        30%, 100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
     
 }
