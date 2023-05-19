@@ -20,7 +20,7 @@
     <script src="https://kit.fontawesome.com/a398ec554b.js" crossorigin="anonymous"></script>
 </head>
 <body class="body bg-slate-900 scroll-smooth">
-    <header class="flex flex-wrap pt-2">
+    <header class="flex flex-wrap pt-2 hover:no-underline">
         <div class="absolute justify-center mt-4 ml-5">
             <span>
                 <p id="logo-text" class="text-cyan-200 text-opacity-90" style="--order: 4">mstevenreyes.tech</p>
@@ -29,13 +29,15 @@
             <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
         </div>
         <span class="ml-auto mt-4 mr-5 xl:hidden">
-            <p id="burger-menu"><i class="fa-regular fa-square-caret-down"></i></p>
+            <p id="burger-menu">
+                <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 50 50" width="20px" height="20px"><path d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"/></svg>
+            </p>
         </span>
         <div id="navbar-links" class="hidden xl:flex w-full justify-center text-xl mt-4 ml-auto">
             <ul class="flex flex-col w-full text-center lg:flex-row text-base lg:justify-center">
-                <span class="lg:mr-64 hover:underline"><li id="projects-btn" style="--order: 3"><a href="#dev-projects"><p>Projects</p></a></li></span>
-                <span class="lg:mr-64  hover:underline mt-5 lg:mt-0"><li id="resume-btn" style="--order: 2"><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
-                <span class="hover:underline mt-5 lg:mt-0"><li id="contact-btn" style="--order: 1"><a href="#contact"><p>Contact</p></a></li></span>
+                <span class="lg:mr-64"><li id="projects-btn" style="--order: 3"><a href="#dev-projects"><p>Projects</p></a></li></span>
+                <span class="lg:mr-64 mt-5 lg:mt-0"><li id="resume-btn" style="--order: 2"><a href="https://drive.google.com/file/d/1qoA47yYksz2nIddVc6OQn3ywJCDBOb1M/view?usp=share_link" target="_blank"><p>Resume</p></a></li></span>
+                <span class="mt-5 lg:mt-0"><li id="contact-btn" style="--order: 1"><a href="#contact"><p>Contact</p></a></li></span>
             </ul>
         </div>
        
@@ -47,20 +49,29 @@
                 <div id="welcome-text" class="flex order-2 lg:order-1 lg:mr-20 justify-center mt-12">
                     <div class="w-full text-center">
                         <div>
-                            <b><h1 class="text-xl md:text-4xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">Hi, I'm <span class=" glass px-2">Steven!</span></h1></b>
+                            <b><h1 class="text-2xl md:text-4xl lg:text-4xl lg:text-left xl:text-5xl mb-3 sm:mb-8">
+                                    <div class="fade-up inline-block" style="--order: 5">
+                                        Hi, I'm
+                                    </div>  
+                                    <div class="px-2 text-cyan-200 fade-up inline-block" style="--order: 5.5">
+                                        Steven!
+                                    </div>
+                                </h1></b>
                                 <div class="mx-14 lg:mx-0">  
-                                    <h5 class="text-center font-extralight md:text-2xl lg:text-left lg:mx-0 lg:w-80  text-md sm:text-xl" >I am a front-end developer based on Manila, Philippines.</h5>
+                                    <h5  class="text-center font-extralight w-80 opacity-60 md:text-2xl lg:text-left lg:mx-0 lg:w-80  text-md sm:text-xl" >
+                                        <div style="--order:5.7" class="fade-up ">
+                                            I am a front-end developer
+                                        </div>  
+                                        <div style="--order:5.8" class="fade-up duration-5s">
+                                            based on Manila, Philippines.
+                                        </div>
+                                    </h5>
                                 </div>    
                             <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
                             <div id="icons" class="flex justify-center lg:justify-start pt-6 text-3xl text-cyan-500">
-                                <a href="#"><p><i class="fa-brands fa-github"></i></p></a>
-                                <a href="#"><p class="ml-5"><i class="fa-brands fa-linkedin"></i></p></a>
-                                <a href="#"><p class="ml-5"><i class="fa-brands fa-facebook"></i></p></a>
-                                <!-- <img src="./images/html-5.svg" alt="html5">
-                                <img src="./images/css-3.svg" alt="css3">
-                                <img src="./images/java-script.svg" alt="javascript">
-                                <img src="./images/react.svg" alt="react">
-                                <img src="./images/tailwind-css.svg" alt="tailwind"> -->
+                                <a href="https://github.com/mstevenreyes"><p class="text-purple-500 fade-up move-up " style="--order:5.9"><i class="fa-brands fa-github"></i></p></a>
+                                <a href="https://www.linkedin.com/in/mstevenreyes/"><p class="ml-5 text-blue-500 fade-up" style="--order:6"><i class="fa-brands fa-linkedin"></i></p></a>
+                                <a href="https://www.facebook.com/msdvreyes/"><p class="ml-5 text-blue-300 fade-up" style="--order:6.1"><i class="fa-brands fa-facebook"></i></p></a>
                             </div>
                             <!-- <div class="flex">
                                 <button class="text-xl text-slate-300 border-white rounded-md p-7 ">HIRE ME</button>
@@ -69,24 +80,22 @@
                     </div>       
                 </div>
                 <!-- profile image -->
-                <div id="profile-image" class="flex items-center order-1 lg:order-2 lg:max-w-xs lg:pt-0 justify-center lg:ml-20">
-                    <img class="max-w-xs w-40 md:w-56 lg:w-80" src="./images/profile_picture_blob_optimized.webp" alt="profile-picture">
+                <div id="profile-image" style="--order:5.5" class="fade-up-profile duration-5s flex items-center order-1 justify-center  sm:w-full lg:order-2 lg:max-w-xs lg:pt-0  lg:ml-20">
+                    <img class="max-w-xs w-40  lg:w-80" src="./images/profile_picture_blob.png" alt="profile-picture">
                 </div>
             </div>
-            <div class="flex justify-center mt-16 xl:mt-28">
+            <div class="flex justify-center mt-16 xl:mt-28 fade-up" style="--order:6">
                 <span class="text-lg">
                     <a href="#about-me">
-                        <button id="go-down-button" class="w-max hover:bg-slate-100 px-7"><i class="fa-solid fa-angles-down"></i></button>
+                        <button id="go-down-button" class="move-up focus:bg-none w-max px-7"><i class="fa-solid fa-angles-down"></i></button>
                     </a>
                 </span> 
             </div>
         </section>
-        <section id="about-me" class="flex items-center min-h-screen" pt-5 pb-5">
-            <div class="about-me-container flex flex-col xl:flex-row justify-center text-white">
-                <div class="order-2 xl:order-1 mx-7 pt-8 pb-16 xl:w-4/12">
-                    <div class="tech-stack-container flex flex-col">
-                        
-                        <div>   
+        <section id="about-me" class="flex items-center min-h-screen mx-5" pt-5 pb-5">
+            <div class="about-me-container max-w-max flex flex-col xl:flex-row justify-center text-white">
+                <div class="order-2 xl:order-1 ml-7 mr-7 2xl:mr-14 pt-8 pb-16 ">
+                    <div class="tech-stack-container flex flex-col"> 
                             <ul>
                                 <li>JavaScript</li>
                                 <li>React</li>
@@ -98,118 +107,61 @@
                                 <li>WooCommerce</li>
                                 <li>Drupal</li>
                             </ul>
-                        </div>
-                        
                     </div>
                     <h2 class="text-2xl xl:text-5xl font-bold pt-8">About Me</h2>
                     <p class="text-xl font-bold mt-5">Building stuff is awesome.</p>
-                    <p class="mt-5">I was introduced in web development in 2012 at age 12 in an extracurricular activity. During those moments, I was able to realize the creative side of technology and had a lot of fun creating it using basic HTML/CSS. </p>
-                    <!-- <a href="#"><p class="text-cyan-300 font-semibold mt-5">Keep reading my bio</p></a> -->
-                    
+                    <p class="mt-5">I was introduced in web development in 2013 at age 13 in an extracurricular activity. During those moments, I was able to realize the creative side of technology and had a lot of fun creating it using basic HTML/CSS. </p>
+                    <a href="#"><p id="bio-btn" class="text-cyan-300 font-semibold mt-8">Keep reading my bio</p></a>
                 </div>
-                
-                <div class="rounded-lg xl:order-2 mx-7 max-w-sm">
+                <div class="flex justify-center mx-7 2xl:mx-0 xl:order-2 max-w-sm pt-7 xl:pt-0">
                     <img class="rounded-lg" src="./images/about-me-picture.jpg" alt="picture of steven reyes">
                 </div>
             </div>
         </section>
-        <section id="dev-projects" class="text-white min-h-screen">
-            <div class="projects-container w-full h-full py-20">
-                <div id="personal-projects" class="container mx-auto text-center">
-                    <p class="mb-10 text-2xl">Personal Projects</p>
-                    <ul class="flex justify-center flex-wrap">
-                        <span class="mx-5">
-                            <li>
-                                <div class="card">
-                                    <img src="./images/project-1.webp" alt="" width="400rem">
-                                </div>
-                                
-                                <p class="mt-10 mb-5 text-xl">University Helpdesk</p>
-                            </li>
-                        </span>
-                        <span class="mx-5">
-                            <li>
-                                <img src="./images/project-2.webp" alt="" width="400rem">
-                                <p class="mt-10 mb-5 text-xl">PUV Operations Management System</p>
-                            </li>
-                        </span>
-                        <span class="mx-5">
-                            <li>
-                                <img src="./images/project-3.webp" alt="" width="400rem">
-                                <p class="mt-10 mb-5 text-xl">Biometrics Attendance Desktop App</p>
-                            </li>
-                        </span>
-                    </ul>
-                </div>
-                <div id="client-projects" class="container mx-auto text-center mb-5 mt-10">
-                    <p class="mb-10 text-2xl">Client Projects</p>
-                    <ul class="flex justify-center flex-wrap">
-                        <span class="mx-5 ">
-                            <li>
-                                <img src="./images/project-4.webp" alt="" width="400rem">
-                                <p class="mt-10 mb-5 text-xl">RedTech</p>
-                                <p class="text-sm">Invoice Inventory System</p>
-                            </li>
-                        </span>
-                        <span class="mx-5 basis-auto">
-                            <li>
-                                <img src="./images/project-5.webp" alt="" width="400rem">
-                                <p class="mt-10 mb-5 text-xl">JasTech</p>
-                                <p class="text-sm">Landing Site</p>
-                            </li>
-                        </span>
-                        <span class="mx-5 basis-auto">
-                            <li>
-                                <img src="./images/project-6.webp" alt="" width="400rem">
-                                <p class="mt-10 mb-5 text-xl">Alfawhite</p>
-                                <p class="text-sm">Landing Site</p>
-                            </li>
-                        </span>
-                    </ul>
+        <section id="dev-projects" class="flex justify-center text-white min-h-screen mx-5">
+            <div class="projects-container flex flex-col xl:flex-row flex-wrap py-20">
+                <p class="text-2xl xl:text-2xl font-bold xl:mr-5">Projects I've Worked On </p>
+                <span class="line mb-10 mr-auto w-full xl:w-80 mt-5"></span>
+                <h2 class="text-3xl xl:text-5xl text-center">Coming Soon!</h2>
+                <div class="project-card-container flex flex-col w-full justify-center xl:justify-start">
+ 
+                    <!-- <div class="project-card-left w-full bg-slate-500 h-96 mt-5">
+                        <div class="card bg-slate-50 w">
+
+                        </div>
+
+                    </div> -->
                 </div>
             </div>
         </section>
         <section id="contact" class="flex justify-center pt-5">
-            <div class="w-max ml-10 mr-10">
-                <div id="form-header" class="flex">
-                    <div id="form-header-logo" class="w-8 filter-orange mr-2">
-                        <img src="./images/coffee-cup.svg" alt="coffee-cup">
-                    </div>
-                    <div class="mt-3">Let's have a chat:</div>
-                </div>
-                <div id="form-body" class="flex flex-wrap flex-col text-black">
-                    <form id="contact-me" action="https://formspree.io/f/mdovkonl" method="POST">
-                        <div class="w-full text-white">
-                            <label for="name">Name:</label>
-                        </div>
-                        <input type="text" name="name" id="name" required>
-                        <div class="w-full text-white rounded-sm">
-                            <label for="email">Email:</label>
-                        </div>
-                        <input  type="text" name="email" id="email" required>
-                        <div class="w-full text-white">
-                            <label for="message">Message</label>
-                        </div>
-                        <textarea name="message" id="message" cols="30" rows="10" required></textarea>
-                    </form>
-                    <button type="submit" form="contact-me">submit</button>
-                </div>
+            <div class="w-max ml-10 mr-10 flex flex-col justify-center items-center">
+                <p class="text-center w-max text-3xl xl:text-4xl font-bold">Get In Touch</p>
+                <p class="text-sm xl:w-96 xl:text-base pt-7 opacity-60 text-center">I'm currently looking for offers as a permanent developer for a company. If you are one, feel free to contact me for offers.</p>
+                <div class="mt-10 w-max">
+                    <a class="email-link text-xl rounded-sm slide-upper-left" href="mailto:mstevenreyes@gmail.com" rel="noopener noreferrer" target="_blank">Say Hello</a>
+                </div>  
             </div>
         </section>
-     
     </main>
     <footer class="flex flex-wrap pt-16">
-        <div id="footer-1" class="w-full text-left ml-5"><span class="text-sm">
+        <div id="footer-1" class="w-full text-left ml-5">
             <span class="text-sm lg:text-md">
                 <p>Mark Steven Reyes</p>
             </span>
             <span class="text-xs lg:text-sm opacity-60 w-20 font-mono"><p>© 2023, Designed and created by Mark Steven Reyes</p></span>
         </div>
-        <div id="footer-2" class="w-full text-center pt-10 pb-10">
+        <div id="footer-2" class="flex w-full justify-center text-center pt-10 pb-10">
             <!-- <h4>Socials</h4> -->
-            <a href="https://github.com/mstevenreyes" target="_blank"><i class="fa-brands fa-github-alt fa-lg px-3"></i></a>
-            <a href="https://www.linkedin.com/in/mstevenreyes/" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg px-3"></i></a>
-            <a href="https://www.facebook.com/msdvreyes/" target="_blank"><i class="fa-brands fa-facebook-f fa-lg px-3"></i></a>
+            <div>
+                <a href="https://github.com/mstevenreyes" target="_blank"><i class="fa-brands fa-github-alt fa-lg px-3"></i></a>
+            </div>
+            <div>
+                <a href="https://www.linkedin.com/in/mstevenreyes/" target="_blank"><i class="fa-brands fa-linkedin-in fa-lg px-3"></i></a>
+            </div>
+            <div>
+                <a href="https://www.facebook.com/msdvreyes/" target="_blank"><i class="fa-brands fa-facebook-f fa-lg px-3"></i></a>
+            </div>
         </div>
         <div id="footer-3" class="w-full">
             <!--  -->
