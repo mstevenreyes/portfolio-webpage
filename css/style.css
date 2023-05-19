@@ -1,6 +1,27 @@
 :root {
     --cyan-highlight: rgb(70, 226, 250);
     --cyan-bg: rgb(15 23 42);
+
+    /* Tokyo Adobe Colors */
+    --cyan-green-darkest: #012326;
+    --cyan-green-darker: #2A403C;
+    --cyan-green-lightest: #04D99D;
+    --cyan-green-lighter: #04BF8A;
+    --cyan-green-midtone: #0F8C69;
+
+    /* == */
+
+    /* Navy Blue */
+    --navy-blue-darkest: #091626;
+    --navy-blue-darker: #122640;
+    --navy-blue-base: #1B3659;
+    --navy-white-complement: #AEB5BF;
+
+    /*  */
+}
+
+::selection {
+    background-color: var(--navy-blue-base);
 }
 
 /* Utility classes */
@@ -34,12 +55,14 @@
 .slide-upper-left {
     transform: translate(0%);
     transition-duration: .2s;
+    transition-delay: .08s;
 }
 
 .slide-upper-left:hover {
-    transform: translate(-5%, -11%);
+    transform: translate(-3%, -10%);
     /* animation: slideUpperLeft .5s ease-in-out forwards; */
     transition-duration: .2s;
+    transition-delay: .08s;
 }
 
 /* Utility classes end */
@@ -120,12 +143,14 @@ html{
 body {
     font-family: 'Inter', Arial, Helvetica, sans-serif;
     color: white;
+    background-color: var(--cyan-green-darkest);
  
     height: 100%;
     margin: 0;
     padding: 0;
     position: relative;
 }
+
 
 body::before {
     background: radial-gradient(
@@ -160,12 +185,6 @@ body::before {
     animation-delay: calc(var(--order) * 200ms);
 }
 
-
-/* #logo-text {
-    opacity: 0;
-    animation: fadeInCustom 8s ease-in-out forwards;
-    animation-delay: calc(var(--order) * 200ms);
-} */
 /* About Me CSS */
 
 .tech-stack-container > div > ul {
@@ -232,44 +251,8 @@ body::before {
 
 #go-down-button {
     transition: all .3s ease;
-    border-radius: 10em;
     color: #FFFFFF;
 }
-
-@media (hover: hover) {
-    #go-down-button:hover {
-        /* From https://css.glass */
-        /* background: rgba(255, 255, 255, 0); */
-        background: none;
-        /* border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px); */
-        /* border: 1px solid rgba(255, 255, 255, 0.171); */
-    }
-}
-
-@media (hover: none) {
-    #go-down-button:hover {
-        /* From https://css.glass */
-        background: rgba(255, 255, 255, 0.089);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.1px);
-        -webkit-backdrop-filter: blur(5.1px);
-        /* border: 1px solid rgba(255, 255, 255, 0.171); */
-    }
-}
-
-#go-down-button:active {
-    border: none;
-    background-color: rgba(0, 0, 0, 0.1);
-}
-
-#welcome {
-
-}
-
 
 .line {
     display: inline-block;
@@ -297,15 +280,13 @@ body::before {
 /* DEV PROJECTS END */
 
 #burger-menu {
+    fill: var(--navy-white-complement);
+    height: 2rem;
     cursor: pointer;
 }
 
 #navbar-links.active {
     display: flex;
-}
-
-#navbar-links {
-    transition: max-height 1s ease;
 }
 
 .filter-orange {
@@ -328,21 +309,6 @@ textarea {
     transition: .3s ease;
     border: 1px solid rgba(0, 0, 0, 0.1)
 }
-
-textarea:focus, 
-textarea:hover,
-input[type=text]:focus, 
-input[type=text]:hover{
-    /* From https://css.glass */
-    background: rgba( 255, 255, 255, 0.2 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 3px );
-    -webkit-backdrop-filter: blur( 9px );
-    border-radius: 10px;
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
-    outline: none;
-}
-
 
 button[type=submit] {
     background-color: white;
@@ -421,38 +387,34 @@ button[type=submit] {
         height: 10rem;
     }
 
+    /* Hides the mouse gradial design */
     body::before {
         display: none;
     }
-    /* #logo-text {
-        opacity: 0;
-        animation: fadeInCustom 6s ease forwards;
-        animation-delay: calc(var(--order) * 200ms);
-    } */
+
+    #logo-text {
+        animation: fadeUp 5s ease-in-out forwards 10s;
+        animation-delay: calc(7 * 50ms);
+    }
+
     #projects-btn,
     #resume-btn,
-    #contact-btn,
-    #logo-text {
-        animation: fadeDown 6s ease-in forwards;
-        animation-delay: calc(var(--order) * 200ms);
+    #contact-btn
+    {
+        animation: fadeUp 3s ease-in-out forwards;
+        animation-delay: calc(var(--order) * 50ms);
     }
 
-    @keyframes appear {
-        to {
-            width: max-content;
-        }
-    }
-
-    @keyframes fadeDown {
+    @keyframes fadeUp {
         0% {
             opacity: 0;
-            transform: translateY(80%);
+            transform: translateY(70%);
         }
-        5% {
+        10% {
             opacity: .3;
-            transform: translateY(80%);
+            transform: translateY(60%);
         }
-        10%, 100% {
+        20%, 100% {
             opacity: 1;
             transform: translateY(0);
         }
