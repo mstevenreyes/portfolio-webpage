@@ -143,7 +143,7 @@ html{
 }
 
 body {
-    font-family: 'Inter', Arial, Helvetica, sans-serif;
+    font-family: "Poppins", 'Inter', sans-serif;
     color: white;
     background-color: var(--cyan-green-darkest);
  
@@ -263,11 +263,6 @@ body::before {
     border-radius: 5px;
 }
 /* DEV PROJECTS SECTION START */
-
-#dev-projects {
-    /* max-width: 1022px; */
-    
-}
 .glass {
     /* From https://css.glass */
     background: rgba(255, 255, 255, 0.2);
@@ -377,9 +372,7 @@ button[type=submit] {
 }
 
 @media only screen and (max-width: 1280px) {
-    .line {
-        /* display: none; */
-    }
+
 
 
     /* .project-card {
@@ -443,4 +436,5 @@ button[type=submit] {
             transform: translateY(0);
         }
     
+    }
 }
