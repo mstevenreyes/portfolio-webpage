@@ -1409,6 +1409,11 @@ video {
     order: 2;
   }
 
+  .xl\:mx-14 {
+    margin-left: 3.5rem;
+    margin-right: 3.5rem;
+  }
+
   .xl\:mt-28 {
     margin-top: 7rem;
   }
