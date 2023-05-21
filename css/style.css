@@ -341,9 +341,9 @@ button[type=submit] {
     display: block;
     width: 8rem;
     text-align: center;
-    border: 1px solid var(--cyan-highlight);
-    border-radius: 4px;
-    color: var(--cyan-highlight);
+    border: 1px solid var(--cyan-green-lighter);
+    border-radius: 10px;
+    color: var(--cyan-green-lightest);
     padding: 5px 12px;
 }
 
