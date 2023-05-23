@@ -35,21 +35,17 @@
     ></script>
   </head>
   <body class="body scroll-smooth overflow-x-hidden bg-slate-900">
-    <header class="flex flex-wrap pt-2 hover:no-underline">
-      <div class="absolute mt-4 ml-5 justify-center">
-        <span>
-          <p
-            id="logo-text"
-            class="text-cyan-200 text-opacity-90"
-            style="--order: 4"
-          >
-            mstevenreyes.tech
-          </p>
-        </span>
-        <!-- <span><p><img src="images/logo-small.png" alt="" width="60px"></p></span> -->
-        <!-- <span class="mt-4 ml-5 text-2xl"><h3 id="logo-text">Steven Reyes</h3></span> -->
+    <header class="flex flex-wrap pt-2 hover:no-underline justify-end">
+      <div class="absolute mt-4 ml-9 left-0 mr-auto justify-center">
+        <p
+          id="logo-text"
+          class="text-cyan-200 text-opacity-90"
+          style="--order: 4"
+        >
+          mstevenreyes.tech
+        </p>
       </div>
-      <span class="ml-auto mt-4 mr-5 xl:hidden">
+      <span class="ml-auto mt-4 mr-5 md:hidden">
         <p id="burger-menu">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -65,30 +61,24 @@
       </span>
       <div
         id="navbar-links"
-        class="mt-4 ml-auto hidden w-full justify-center text-xl xl:flex"
+        class="hidden md:flex w-full text-xl md:w-4/12 lg:w-3/12 mr-5 md:mr-9 flex-wrap"
       >
         <ul
-          class="flex w-full flex-col text-center text-base lg:flex-row lg:justify-center"
+          class="mt-4 ml-auto md:w-full sm:justify-around md:flex flex-col md:flex-row text-center text-base lg:flex-row"
         >
-          <span class="lg:mr-64"
-            ><li id="projects-btn" style="--order: 3">
+          <li id="projects-btn" class="hover:duration-100 duration-100 hover:text-green-300" style="--order: 3">
               <a href="#dev-projects"><p>Projects</p></a>
-            </li></span
-          >
-          <span class="mt-5 lg:mr-64 lg:mt-0"
-            ><li id="resume-btn" style="--order: 2">
+            </li>
+          <li id="resume-btn" class="hover:duration-100 duration-100 hover:text-green-300" style="--order: 2">
               <a
                 href="./resume.pdf"
                 target="_blank"
                 ><p>Resume</p></a
               >
-            </li></span
-          >
-          <span class="mt-5 lg:mt-0"
-            ><li id="contact-btn" style="--order: 1">
+            </li>
+            <li id="contact-btn" class="hover:duration-200 duration-200 hover:text-green-300" style="--order: 1">
               <a href="#contact"><p>Contact</p></a>
-            </li></span
-          >
+            </li>
         </ul>
       </div>
     </header>
@@ -101,7 +91,7 @@
           <!-- welcome text -->
           <div
             id="welcome-text"
-            class="order-2 mt-12 flex justify-center lg:order-1 lg:mr-20"
+            class="order-2 mt-12 flex justify-center md:order-1 md:mr-20"
           >
             <div class="w-full text-center">
               <div>
@@ -165,10 +155,10 @@
           <div
             id="profile-image"
             style="--order: 5.5"
-            class="fade-up-profile xl:bg-green-300 rounded-full opacity-90 hover:bg-opacity-60 duration-500 duration-4s order-1 flex items-center justify-center sm:w-full lg:order-2 lg:ml-20 lg:max-w-xs lg:pt-0"
+            class="fade-up-profile lg:bg-green-300 rounded-full opacity-90 hover:bg-opacity-60 duration-500 duration-4s order-1 flex items-center justify-center w-full md:w-max md:order-2 lg:ml-20 md:max-w-xs lg:pt-0"
           >
             <img
-            class="w-40 max-w-xs lg:w-80 rounded-full lg:-translate-x-2 lg:-translate-y-2 hover:translate-x-0 hover:translate-y-0 duration-500 delay-200 ease-in-out"
+            class="w-40 max-w-xs md:w-80 rounded-full lg:-translate-x-2 lg:-translate-y-2 hover:translate-x-0 hover:translate-y-0 duration-500 delay-200 ease-in-out"
             src="./images/profile_picture.png"
             alt="profile-picture"
             />
@@ -192,12 +182,12 @@
       </section>
       <section
         id="about-me"
-        class="mx-8 flex min-h-screen items-center justify-center pt-5 pb-5"
+        class="mx-10 md:mx-14 flex min-h-screen items-center justify-center pt-5 pb-5"
       >
         <div
-          class="about-me-container flex max-w-5xl flex-col justify-center text-white xl:flex-row"
+          class="about-me-container flex flex-col max-w-5xl  justify-center text-white md:flex-row"
         >
-          <div class="order-2 mr-7 pt-8 pb-16 xl:order-1 2xl:mr-14 max-w-lg xl:max-w-2xl">
+          <div class="order-2 mr-7 pt-8 pb-16 md:order-1 2xl:mr-14 max-w-lg xl:max-w-2xl">
             <!-- Tech Stack List -->
             <div class="tech-stack-container flex flex-col">
               <ul>
@@ -205,12 +195,9 @@
                 <li>React</li>
                 <!-- <li>Next.js</li> -->
                 <li>jQuery</li>
-                <li>HTML</li>
-                <li>CSS</li>
                 <li>Tailwind CSS</li>
                 <li>Wordpress</li>
                 <li>WooCommerce</li>
-                <li>Drupal</li>
               </ul>
             </div>
             <h2 class="pt-8 text-2xl font-bold xl:text-5xl">About Me</h2>
@@ -228,10 +215,10 @@
             >
           </div>
           <div
-            class="flex w-full justify-center pt-7 xl:order-2 xl:pt-0 2xl:mx-0 items-center"
+            class="flex mx-auto max-w-xs justify-center pt-7 md:order-2 xl:pt-0 2xl:mx-0 md:items-start lg:items-center"
           >
             <img
-              class="min-w-0 opacity-80 md:opacity-100 max-w-xs rounded-lg xl:max-w-sm"
+              class=" pacity-80 md:opacity-100 rounded-lg xl:max-w-sm"
               src="./images/about-me-picture.jpg"
               alt="picture of steven reyes"
             />
@@ -257,7 +244,7 @@
           >
             <!--Card 1 Containerr -->
             <div
-              class="relative flex items-center h-96 w-full rounded-md bg-slate-800 bg-opacity-95 md:flex md:flex-row md:bg-opacity-0"
+              class="relative flex md:items-end lg:items-center h-96 w-full rounded-md bg-slate-800 bg-opacity-95 md:flex md:flex-row md:bg-opacity-0"
             >
               <!-- Project image -->
               <div
@@ -270,19 +257,20 @@
               </div>
               <!-- project details -->
               <div
-                class="md:text-right z-50 flex h-96 w-full flex-col justify-center rounded-md px-16 md:absolute md:top-0 md:right-0 md:bottom-0 md:left-0 md:ml-auto md:h-max md:w-7/12 lg:w-7/12 my-auto"
+                class="md:text-right md:items-end z-50 justify-center flex h-96 w-full flex-col rounded-md px-16 md:absolute md:top-0 md:right-0 md:bottom-0 md:left-0 md:ml-auto md:h-max md:w-7/12 lg:w-7/12 my-auto"
               >
-                <p class="text-green-300 font-semibold">Personal Project</p>
+                <p class="text-green-300 font-semibold">Capstone Project</p>
                 <p class="mt-5 text-2xl font-bold">EZ JEEPNEY</p>
                 <p class="mt-5 text-slate-300 text-sm md:bg-slate-800 md:rounded-md md:bg-opacity-100 md:hover:shadow-2xl md:hover:duration-500 md:duration-500 md:py-6 md:px-7">
                   A windows biometics attendance app for jeepney operators with a web interface for
                   accessing attendance details.
                 </p>
-                <ul class="mt-5 flex flex-row flex-wrap md:justify-end text-sm text-slate-400">
-                  <li class="mr-3 w-max pr-2">PHP</li>
-                  <li class="mr-3 w-max">MySQL</li>
-                  <li class="mr-3 w-max">jQuery</li>
-                  <li class="mr-3 w-max">Bootstrap</li>
+                <ul class="mt-5 w-full sm:w-8/12 md:w-6/12 lg:w-8/12 lg:max-w-lg flex justify-between md:justify-evenly flex-row flex-wrap text-sm text-slate-400">
+                  <li class=" w-max">PHP</li>
+                  <li class=" w-max">MySQL</li>
+                  <li class=" w-max">jQuery</li>
+                  <li class="w-max">Bootstrap</li>
+                  <li class=" w-max">C#</li>
                   <li class="w-max">Ajax</li>
                 </ul>
                 <div class="project-links mt-5 flex md:justify-end">
