@@ -326,7 +326,7 @@ button[type=submit] {
     transition: transform .2s ease-in-out;
 }
 #footer-2 > div:hover {
-    color: var(--cyan-highlight);
+    color: var(--cyan-green-lighter);
     transform: translateY(-20%)
 }
 
