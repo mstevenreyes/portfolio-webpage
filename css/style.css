@@ -324,10 +324,11 @@ button[type=submit] {
 /* Footer CSS */
 #footer-2 > div {
     transition: transform .2s ease-in-out;
+    transition-delay: .1s;
 }
 #footer-2 > div:hover {
     color: var(--cyan-green-lighter);
-    transform: translateY(-20%)
+    transform: translateY(-20%);
 }
 
 @keyframes moveUp {
