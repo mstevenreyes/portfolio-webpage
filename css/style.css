@@ -397,14 +397,13 @@ button[type=submit] {
         animation-delay: calc(var(--order) * 50ms);
     }
 
-    @keyframes fadeUp {
+    /* @keyframes fadeUp {
         0% {
             opacity: 0;
             transform: translateY(70%);
         }
         5% {
             opacity: .3;
-            /* transform: translateY(40%); */
         }
         20%, 100% {
             opacity: 1;
@@ -435,5 +434,5 @@ button[type=submit] {
             transform: translateY(0);
         }
     
-    }
+    } */
 }
