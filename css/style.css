@@ -280,8 +280,13 @@ body::before {
     cursor: pointer;
 }
 
+#navbar-links {
+    transition: 0.5s;
+    overflow: hidden;
+}
+
 #navbar-links.active {
-    display: flex;
+    height: 100px;
 }
 
 .filter-orange {
