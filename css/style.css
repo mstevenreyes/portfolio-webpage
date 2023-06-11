@@ -143,7 +143,7 @@ html{
 }
 
 body {
-    font-family: "Poppins", 'Inter', sans-serif;
+    font-family: "Open Sans", 'Inter', sans-serif;
     color: white;
     background-color: var(--cyan-green-darkest);
     margin: 0;
