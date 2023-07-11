@@ -147,6 +147,10 @@ p {
     }
 }
 
+@keyframes name-animation {
+    
+}
+
 /* Animations end */
 html{
     font-size: 16px;
@@ -184,6 +188,12 @@ body::before {
     position: relative;
     transition: .2s ease-out;
     width: 18px;
+}
+
+.name-animation {
+    border-right-width: 2px;
+    border-color: var(--cyan-green-lighter);
+
 }
 
 #projects-btn,
@@ -348,7 +358,7 @@ button[type=submit] {
     transition-delay: .1s;
 }
 #footer-2 > div:hover {
-    color: var(--cyan-green-lighter);
+    color: cyan;
     transform: translateY(-20%);
 }
 
@@ -363,9 +373,9 @@ button[type=submit] {
     display: block;
     width: 8rem;
     text-align: center;
-    border: 1px solid var(--cyan-green-lighter);
+    border: 1px solid cyan;
     border-radius: 10px;
-    color: var(--cyan-green-lightest);
+    color: cyan;
     padding: 5px 12px;
 }
 
