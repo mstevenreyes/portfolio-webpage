@@ -20,6 +20,16 @@
     /*  */
 }
 
+/* removes highlight color on mobile screens */
+input,
+textarea,
+button,
+select,
+a,
+p {
+    -webkit-tap-highlight-color: transparent;
+}
+
 ::selection {
     background-color: var(--navy-blue-base);
 }
