@@ -229,7 +229,7 @@ body::before {
 }
 
 .tech-stack-container > ul > li:hover {
-    background-color: rgba(23, 90, 101, 0.733);
+    background-color: rgba(23, 67, 101, 0.733);
 }
 /*  */
 #bio-btn {
