@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mark Steven Reyes | Front-end Developer</title>
+    <meta
+      name="description"
+      content="I am a React developer currently using Javascript + React Framework, and TailwindCSS as a tool for designing websites."
+    />
+    <meta
+      property="og:image"
+      content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://i.ibb.co/WBT8pQd/steven-reyes-logo.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100;300;400;900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Outfit:wght@100;200;300;400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./dist/output.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/assets/fontawesome/css/fontawesome.css" />
+    <link rel="stylesheet" href="/assets/fontawesome/css/brands.css" />
+    <link rel="stylesheet" href="/assets/fontawesome/css/solid.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <script
+      src="https://kit.fontawesome.com/a398ec554b.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="body scroll-smooth overflow-x-hidden bg-slate-900">
+    <header class="flex flex-wrap pt-2 hover:no-underline justify-end">
+      <div class="absolute mt-4 ml-9 left-0 mr-auto justify-center">
+        <p
+          id="logo-text"
+          class= "text-sm text-opacity-90"
+          style="--order: 4"
+        >
+          MARK STEVEN REYES
+        </p>
+      </div>
+      <span class="ml-auto mt-4 mr-5 md:hidden">
+        <p id="burger-menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 50 50"
+            width="20px"
+            height="20px"
+          >
+            <path
+              d="M 0 9 L 0 11 L 50 11 L 50 9 Z M 0 24 L 0 26 L 50 26 L 50 24 Z M 0 39 L 0 41 L 50 41 L 50 39 Z"
+            />
+          </svg>
+        </p>
+      </span>
+      <div
+        id="navbar-links"
+        class="h-0 md:h-10 md:flex w-full md:w-4/12 lg:w-1/6 md:mr-5 md:mr-9 flex-wrap"
+      >
+        <ul
+          class="mt-4 text-sm ml-auto md:w-full sm:justify-around md:flex flex-col md:flex-row text-center lg:flex-row"
+        >
+          <li id="projects-btn" class="hover:duration-100 duration-100 hover:text-cyan-300" style="--order: 3">
+              <a href="#dev-projects"><p>PROJECTS</p></a>
+            </li>
+          <li id="resume-btn" class="hover:duration-100 duration-100 hover:text-cyan-300" style="--order: 2">
+              <a
+                href="./resume.pdf"
+                target="_blank"
+                ><p>RESUME</p></a
+              >
+            </li>
+            <li id="contact-btn" class="hover:duration-200 duration-200 hover:text-cyan-300" style="--order: 1">
+              <a href="#contact"><p>CONTACT</p></a>
+            </li>
+        </ul>
+      </div>
+    </header>
+    <main>
+      <section
+        id="welcome"
+        class="flex h-screen w-full flex-col items-center justify-center pb-28"
+      >
+        <div class="flex flex-wrap mx-5 justify-center pt-12 md:pt-12 xl:pt-16">
+          <!-- welcome text -->
+          <div
+            id="welcome-text"
+            class="order-2 mt-12 flex justify-center md:order-1 md:mr-20"
+          >
+            <div class="w-full text-center">
+              <div>
+                <b
+                  ><h1
+                    class="mb-3 text-2xl sm:mb-0 sm:text-4xl lg:text-left lg:text-4xl xl:text-5xl"
+                  >
+                    <div class="text-base md:text-base md:ml-1 tracking-widest w-full fade-up inline-block" style="--order: 5">
+                      Hi, I'm
+                    </div>
+                    <div
+                      class="text-4xl md:text-7xl inline-block fade-up inline-block tracking-wider text-cyan-300"
+                      style="--order: 5.5"
+                    >
+                      Steven
+                    </div>
+                  </h1></b
+                >
+                <div class="lg:mx-0">
+                  <h5
+                    class="text-md w-80 text-center font-extralight opacity-60 sm:text-xl md:text-xl lg:mx-0 lg:w-80 lg:text-left"
+                  >
+                    <div style="--order: 6.3" class="fade-up">
+                      a Front-end Developer
+                    </div>
+                    <div style="--order: 6.5" class="fade-up duration-5s">
+                      based on Manila, Philippines.
+                    </div>
+                  </h5>
+                </div>
+                <!-- <span class="projects-navigation"><button type="button" id="project-next"><i class="fa-solid fa-chevron-right"></i></button></span> -->
+                <div
+                  id="icons"
+                  class="flex justify-center pt-6 text-3xl text-cyan-500 lg:justify-start"
+                >
+                  <a href="https://github.com/mstevenreyes" target="_blank"
+                    ><p
+                      class="fade-up move-up text-cyan-400"
+                      style="--order: 5.9"
+                    >
+                      <i class="fa-brands fa-github"></i></p
+                  ></a>
+                  <a
+                    href="https://www.linkedin.com/in/mstevenreyes/"
+                    target="_blank"
+                    ><p class="fade-up ml-5 text-cyan-400" style="--order: 6">
+                      <i class="fa-brands fa-linkedin"></i></p
+                  ></a>
+                  <a href="https://www.twitter.com/mstevenreyes" target="_blank"
+                    ><p class="fade-up ml-5 text-cyan-400" style="--order: 6.1">
+                      <i class="fa-brands fa-twitter"></i></p
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- profile image -->
+          <div
+            id="profile-image"
+            style="--order: 5.5"
+            class="fade-up-profile lg:bg-cyan-300 rounded-full opacity-90 hover:bg-opacity-60 duration-500 duration-4s order-1 flex items-center justify-center w-full md:w-max md:order-2 lg:ml-20 md:max-w-xs lg:pt-0"
+          >
+            <img
+            class="w-40 max-w-xs md:w-80 rounded-full lg:-translate-x-2 lg:-translate-y-2 hover:translate-x-0 hover:translate-y-0 duration-500 delay-200 ease-in-out"
+            src="./images/profile_picture.png"
+            alt="profile-picture"
+            />
+          </div>
+        </div>
+        <div
+          class="fade-up mt-16 flex justify-center xl:mt-52"
+          style="--order: 6"
+        >
+      
+          <a href="#about-me">
+            <button
+              id="go-down-button"
+              class="move-up w-max focus:bg-none"
+            >
+              <i class="fa-solid fa-angles-down"></i>
+            </button>
+          </a>
+
+        </div>
+      </section>
+      <section
+        id="about-me"
+        class="mx-10 md:mx-14 flex min-h-screen items-center justify-center pt-5 pb-5"
+      >
+        <div
+          class="about-me-container flex flex-col max-w-5xl  justify-center text-white md:flex-row"
+        >
+          <div class="order-2 mr-7 pt-8 pb-16 md:order-1 2xl:mr-14 max-w-lg xl:max-w-2xl">
+            <!-- Tech Stack List -->
+            <h2 class="text-2xl font-bold xl:text-5xl pb-8">My Skills</h2>
+            <div class="tech-stack-container flex flex-col">
+              <ul>
+                <li>JavaScript</li>
+                <li>React</li>
+                <li>Vite</li>
+                <li>Bootstrap</li>
+                <li>PHP</li>
+                <li>TypeScript</li>
+                <li>jQuery</li>
+                <li>TailwindCSS</li>
+                <li>WordPress</li>
+                <li>WooCommerce</li>
+              </ul>
+            </div>
+            <p class="mt-5 text-xl font-bold">Programmer by heart.</p>
+            <p class="mt-5 max-w-3xl">
+              In 2013, I first learned about web development through a cocurricular activity. I was able to recognize the artistic aspect of technology at that time and had a great time making it using simple HTML and CSS.
+            </p>
+            <a href="#"
+              ><p id="bio-btn" class="mt-8 font-semibold text-cyan-300">
+                Keep reading my bio
+              </p></a
+            >
+          </div>
+          <div
+            class="flex mx-auto my-auto max-w-xs justify-center pt-7 md:order-2 xl:pt-0 2xl:mx-0 md:items-start lg:items-center"
+          >
+            <img
+              class="opacity-80 md:opacity-100 rounded-lg"
+              src="./images/about-me-picture.jpg"
+              alt="picture of steven reyes"
+            />
+          </div>
+        </div>
+      </section>
+      <section
+        id="dev-projects"
+        class="mx-8 flex min-h-screen justify-center text-white"
+      >
+        <div
+          class="projects-container flex w-full max-w-5xl flex-col flex-wrap py-20"
+        >
+          <p
+            class="text-center text-2xl font-bold xl:mr-5 xl:text-left xl:text-2xl"
+          >
+            My Projects
+          </p>
+          <span class="line mb-10 mr-auto mt-5 w-full xl:w-80"></span>
+          <!-- All Project Cards Container -->
+          <div
+            class="project-card-container flex w-full flex-col justify-center xl:justify-start"
+          >
+            <!--Card 1 Containerr -->
+            <div
+              class="relative flex md:items-end lg:items-center h-96 w-full rounded-md bg-slate-800 bg-opacity-95 md:flex md:flex-row md:bg-opacity-0"
+            >
+              <!-- Project image -->
+              <div
+                class="project-image-container absolute -z-10 h-96 w-full overflow-x-hidden rounded-lg text-cyan-300 opacity-70 md:relative md:z-0 md:w-7/12"
+              >
+                <img
+                  class="h-full w-full object-cover object-left"
+                  src="./images/project-2.jpg"
+                />
+              </div>
+              <!-- project details -->
+              <div
+                class="md:text-right md:items-end z-50 justify-center flex h-96 w-full flex-col rounded-md px-16 md:px-0 md:absolute md:top-0 md:right-0 md:bottom-0 md:left-0 md:ml-auto md:h-max md:w-7/12 lg:w-7/12 my-auto"
+              >
+                <p class="text-cyan-300 font-semibold">Capstone Project</p>
+                <p class="mt-5 text-2xl font-bold">EZ JEEPNEY</p>
+                <p class="mt-5 text-slate-300 text-sm md:max-w-lg md:bg-slate-800 md:rounded-md md:bg-opacity-100 md:hover:shadow-2xl md:hover:duration-500 md:duration-500 md:py-6 md:px-7">
+                  A windows biometics attendance app for jeepney operators with a web interface for
+                  accessing attendance details.
+                </p>
+                <ul class="mt-5 w-full sm:w-8/12 md:w-6/12 lg:w-8/12 lg:max-w-xs flex justify-between md:justify-between flex-row flex-wrap text-sm text-slate-400">
+                  <li class=" w-max">PHP</li>
+                  <li class=" w-max">MySQL</li>
+                  <li class=" w-max">jQuery</li>
+                  <li class="w-max">Bootstrap</li>
+                  <li class=" w-max">C#</li>
+                  <li class="w-max">Ajax</li>
+                </ul>
+                <div class="project-links mt-5 flex md:justify-end">
+                  <p class="ml-8 hover:text-cyan-400 duration-100">
+                    <a href="https://github.com/mstevenreyes/EZJeepney_WebPortal" target="_blank"><i class="fa-brands fa-github"></i></a>
+                  </p>
+                  <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
+                </div>
+              </div>
+          
+            </div>
+            <!-- Card 2 Container -->
+            <div
+            class="relative flex md:items-end lg:items-center mt-14 h-96 w-full rounded-md bg-slate-800 bg-opacity-95 md:flex md:flex-row md:bg-opacity-0"
+            >
+              <!-- Project image -->
+              <div
+                class="project-image-container absolute ml-auto -z-10 h-96 w-full overflow-x-hidden rounded-lg text-cyan-300 opacity-70 md:relative md:z-0 md:w-7/12"
+              >
+                <img
+                  class="h-full w-full object-cover object-center"
+                  src="./images/project-weatherapp.jpg"
+                />
+              </div>
+              <!-- project details -->
+              <div
+                class="md:text-left md:items-start z-50 justify-center flex h-96 w-full flex-col px-16 md:px-0 rounded-md pr-16 md:absolute md:top-0 md:right-0 md:bottom-0 md:left-0 md:mr-auto md:h-max md:w-7/12 lg:w-7/12 my-auto"
+              >
+                <p class="text-cyan-300 font-semibold">React Project</p>
+                <p class="mt-5 text-2xl font-bold">WeatherApp</p>
+                <p class="mt-5 text-slate-300 text-sm md:max-w-lg md:bg-slate-800 md:rounded-md md:bg-opacity-100 md:hover:shadow-2xl md:hover:duration-500 md:duration-500 md:py-6 md:px-7">
+                  A simple weather tracking app for querying current and future weather forecasts.
+                </p>
+                <ul class="mt-5 w-full sm:w-8/12 md:w-6/12 lg:w-8/12 lg:max-w-xs flex justify-between md:justify-between flex-row flex-wrap text-sm text-slate-400">
+                  <li class=" w-max">React</li>
+                  <li class=" w-max">Vite</li>
+                  <li class=" w-max">GH Pages</li>
+                  <li class="w-max">TailwindCSS</li>
+                </ul>
+                <div class="project-links mt-5 flex md:justify-end">
+                  <p class=" mr-8 hover:text-cyan-400 duration-100">
+                    <a href="https://github.com/mstevenreyes/react-weather-app" target="_blank"><i class="fa-brands fa-github"></i></a>
+                  </p>
+                  <p class=" mr-8 hover:text-cyan-400 duration-100">
+                    <a href="https://mstevenreyes.github.io/react-weather-app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                  </p>
+                  <!-- <a href="#"><i class="fa-brands fa-youtube"></i></a> -->
+                </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </section>
+      <section id="contact" class="flex justify-center pt-5">
+        <div
+          class="ml-10 mr-10 flex w-max flex-col items-center justify-center"
+        >
+          <p class="w-max text-center text-3xl font-bold xl:text-4xl">
+            Get In Touch
+          </p>
+          <p class="max-w-sm pt-7 text-center text-sm opacity-60 xl:text-base">
+            I'm currently looking for offers as a permanent developer for a
+            company. If you are one, feel free to contact me for offers.
+          </p>
+          <div class="mt-10 w-max">
+            <a
+              class="email-link slide-upper-left rounded-sm text-xl"
+              href="mailto:mstevenreyes@gmail.com"
+              rel="noopener noreferrer"
+              target="_blank"
+              >Say Hello</a
+            >
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="flex flex-wrap pt-16">
+      <div id="footer-1" class="ml-5 w-full flex justify-center">
+        <div class="w-48">
+          <p class="text-lg font-bold">Mark Steven Reyes</p>
+          <p class="text-xs opacity-60">© 2023, Designed and created by Mark Steven Reyes</p>
+        </div>
+      </div>
+      <div
+        id="footer-2"
+        class="flex w-full justify-center pt-10 pb-10 text-center"
+      >
+        <!-- <h4>Socials</h4> -->
+        <div>
+          <a href="https://github.com/mstevenreyes" target="_blank"
+            ><i class="fa-brands fa-github-alt fa-lg px-3"></i
+          ></a>
+        </div>
+        <div>
+          <a href="https://www.linkedin.com/in/mstevenreyes/" target="_blank"
+            ><i class="fa-brands fa-linkedin-in fa-lg px-3"></i
+          ></a>
+        </div>
+        <div>
+          <a href="https://www.twitter.com/mstevenreyes/" target="_blank"
+            ><i class="fa-brands fa-twitter fa-lg px-3"></i
+          ></a>
+        </div>
+      </div>
+      <div id="footer-3" class="w-full">
+        <!-- content  -->
+      </div>
+      <div id="footer-3" class="w-full">
+        <!-- content -->
+      </div>
+    </footer>
+    <script src="./scripts/scripts.js"></script>
+  </body>
+</html>
