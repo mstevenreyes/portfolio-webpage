@@ -547,7 +547,7 @@ export default function Home() {
       {/* --- Footer --- */}
       <footer className="py-8 border-t border-zinc-800/80 bg-black text-center text-xs text-zinc-500 font-mono">
         <div className="max-w-6xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p>© {new Date().getFullYear()} {CONTACT_INFO.name}. All rights reserved.</p>
+          <p>© 2026 {CONTACT_INFO.name}. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#about" className="hover:text-zinc-300 transition">Back to Top ↑</a>
           </div>
