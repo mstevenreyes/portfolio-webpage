@@ -4,7 +4,7 @@ import React, { useState, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion, Variants } from "framer-motion";
-import emailjs from '@emailjs/browser';
+import emailjs from "@emailjs/browser";
 import ReCAPTCHA from "react-google-recaptcha";
 
 // --- Animation Variants ---
@@ -152,12 +152,22 @@ export default function Home() {
     setIsSubmitting(true);
     setErrorMsg(null);
 
+    const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
+    const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
+    const publicKey = process.env.NEXT_PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    if (!serviceId || !templateId || !publicKey) {
+      setErrorMsg("Email service configuration is missing.");
+      setIsSubmitting(false);
+      return;
+    }
+
     try {
       await emailjs.sendForm(
-        'service_2d32ce3',       // Your specific service ID
-        'YOUR_TEMPLATE_ID',      // Replace with your EmailJS Template ID
+        serviceId,
+        templateId,
         formRef.current,
-        'YOUR_PUBLIC_KEY'        // Replace with your EmailJS Public Key
+        publicKey
       );
 
       setFormSubmitted(true);
@@ -251,12 +261,6 @@ export default function Home() {
 
               {/* Image Frame Container */}
               <div className="relative w-full h-full rounded-3xl bg-zinc-900 border border-zinc-800 overflow-hidden flex flex-col items-center justify-center p-6 text-center">
-                
-                {/* 
-                  NOTE FOR PHOTO REPLACEMENT:
-                  Uncomment the <Image /> component below and place your portrait photo at /public/portrait.png
-                */}
-                
                 <Image
                   src="/portrait.png"
                   alt={CONTACT_INFO.name}
@@ -522,11 +526,15 @@ export default function Home() {
                   </div>
 
                   <div className="pt-2">
-                    <ReCAPTCHA
-                      sitekey="YOUR_RECAPTCHA_SITE_KEY"
-                      onChange={(token) => setCaptchaToken(token)}
-                      theme="dark"
-                    />
+                    {process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY ? (
+                      <ReCAPTCHA
+                        sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                        onChange={(token) => setCaptchaToken(token)}
+                        theme="dark"
+                      />
+                    ) : (
+                      <p className="text-xs text-red-400 font-mono">reCAPTCHA site key missing.</p>
+                    )}
                   </div>
 
                   <button
